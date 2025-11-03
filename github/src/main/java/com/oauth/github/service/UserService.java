@@ -30,6 +30,7 @@ public class UserService  extends DefaultOAuth2UserService {
         newUser.setEmail(oAuth2User.getAttribute("email"));
         newUser.setPictureUrl(oAuth2User.getAttribute("avatar_url"));
 
+        loginUser(newUser);
         return oAuth2User;
     }
 
